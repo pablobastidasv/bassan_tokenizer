@@ -1,0 +1,6 @@
+rootProject.name = 'pm'
+include 'plugin'
+include 'example'
+include 'server'
+
+
