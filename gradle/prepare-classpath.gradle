@@ -1,0 +1,15 @@
+task createPluginClasspath(
+        group: "verification",
+        description: "Create a file with the classpath tests resources") {
+    def outputDir = file("${buildDir}/resources/integrationTest")
+
+    inputs.files sourceSets.integrationTest.runtimeClasspath
+    outputs.dir outputDir
+
+    doLast {
+        outputDir.mkdirs()
+        file("${outputDir}/plugin-classpath.txt").text = sourceSets.test.runtimeClasspath.join('\n',)
+    }
+}
+
+integrationTest.dependsOn createPluginClasspath

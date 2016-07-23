@@ -1,0 +1,12 @@
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "http://nexus-bassanco2.rhcloud.com/repository/maven-snapshots/") {
+                authentication(userName: "$bassanNexusUser", password: "$bassanNexusPass")
+            }
+            pom.version = "$version"
+            pom.artifactId = "tokenizer"
+            pom.groupId = "co.bassan.plugins"
+        }
+    }
+}
