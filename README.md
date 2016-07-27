@@ -8,6 +8,7 @@ The next are the features that we want to add to tokenizer project.
 * Gradle plugin
 * The plugin must work correctly in Maven projects too
 * Possibility to manage different values for each different environments
+* Set of values to switch between they in test environments
 * Server exposing restful web services with the information to replace on the token
 * Web UI to manage the values
 * User and roles to the server and the web app
